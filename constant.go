@@ -32,4 +32,5 @@ var (
 	ERR_FIND_CATEGORY_IS_NULL  = ErrResult{20002, "failed", "find category is null!"}
 	ERR_IVY_SUBID_IS_NULL  = ErrResult{20003, "failed", "ivySubId is null!"}
 	ERR_ALBUM_ID_IS_NULL  = ErrResult{20004, "failed", "albumId is null!"}
+	ERR_IVY_OWNER_UID_IS_NULL  = ErrResult{20004, "failed", "ivyOwnerUid is null!"}
 )
