@@ -1,6 +1,9 @@
 package utils
 
-import "github.com/shomali11/util/xhashes"
+import (
+	"github.com/shomali11/util/xhashes"
+	"strconv"
+)
 import "github.com/mitchellh/hashstructure"
 
 
@@ -16,8 +19,8 @@ func GetHashValue(v interface{}) uint64 {
 }
 
 /**
- * 获取任意String的hash int值
+ * 获取任意String的FNV32 hash值
  */
-func GetStringHashValue(v string) uint32 {
-	return xhashes.FNV32a(v)
+func GetStringHashValue(v string) string {
+	return strconv.FormatInt(int64(xhashes.FNV32a(v)), 10)
 }
