@@ -9,7 +9,7 @@ import (
 /**
  * 为logStash记录的Beego接口日志
  */
-func RecordLog4LogStash(methodType string, body interface{}, c *beego.Controller) {
+func RecordLog4LogStash(methodType string, body interface{}, c beego.Controller) {
 	recordVal := make(map[string]interface{})
 	recordVal["controllerName"], recordVal["actionName"] = c.GetControllerAndAction()
 	recordVal["actionType"] = methodType
