@@ -5,10 +5,17 @@ import (
 	"github.com/mr-tron/base58"
 )
 
-// 获取复合设备标识
-func GetDeviceComboId(deviceId string, devicePlatform string) (deviceComboId string) {
+/* 获取复合设备标识
+ * @param deviceId 设备id
+ * @param devicePlatform 设备平台
+ * @param userId 注册用户id
+ */
+func GetDeviceComboId(deviceId string, devicePlatform string, userId string) (deviceComboId string) {
 	if deviceId != "" && devicePlatform != "" {
 		deviceComboId = deviceId + devicePlatform
+		if devicePlatform == "2" && userId != "" { // Hack here：由于安卓生成deviceId不唯一，故此加入uid保证唯一
+			deviceComboId = userId + "_" + deviceId + devicePlatform
+		}
 		return
 	} else {
 		return ""
