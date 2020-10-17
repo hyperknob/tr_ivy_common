@@ -2,7 +2,7 @@ package utils
 
 import (
 	"encoding/json"
-	"github.com/wonderivan/logger"
+	"github.com/hyperknob/logger"
 	"github.com/astaxie/beego"
 )
 
