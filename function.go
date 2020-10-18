@@ -13,9 +13,10 @@ import (
 func GetDeviceComboId(deviceId string, devicePlatform string, userId string) (deviceComboId string) {
 	if deviceId != "" && devicePlatform != "" {
 		deviceComboId = deviceId + devicePlatform
-		if devicePlatform == "2" && userId != "" { // Hack here：由于安卓生成deviceId不唯一，故此加入uid保证唯一
-			deviceComboId = userId + "_" + deviceId + devicePlatform
-		}
+		// 禁用
+		//if devicePlatform == "2" && userId != "" { // Hack here：由于安卓生成deviceId不唯一，故此加入uid保证唯一
+		//	deviceComboId = userId + "_" + deviceId + devicePlatform
+		//}
 		return
 	} else {
 		return ""
