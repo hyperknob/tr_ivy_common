@@ -15,11 +15,15 @@ func GetDeviceComboId(deviceId string, devicePlatform string, userId string) (de
 		// 仅仅记录app平台的设备id
 		if devicePlatform == "1" || devicePlatform == "2" {
 			deviceComboId = deviceId + devicePlatform
+		} else {
+			deviceComboId = "unknown"
 		}
 		// 禁用
 		//if devicePlatform == "2" && userId != "" { // Hack here：由于安卓生成deviceId不唯一，故此加入uid保证唯一
 		//	deviceComboId = userId + "_" + deviceId + devicePlatform
 		//}
+	} else {
+		deviceComboId = "unknown"
 	}
 	return
 }
