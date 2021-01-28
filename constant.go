@@ -27,6 +27,8 @@ var (
 	ERR_WIDGET_IS_NULL           = ErrResult{10012, "failed", "avatar widget is null!"}
 	ERR_DEVICE_ID_IS_NULL        = ErrResult{10013, "failed", "deviceId is null!"}
 	ERR_DEVICE_PLATFORM_IS_NULL  = ErrResult{10014, "failed", "X-Platform is null!"}
+	ERR_PHOTO_DECODE_FAIL        = ErrResult{10015, "failed", "photo decode failed!"}
+	ERR_MKDIR_FAIL               = ErrResult{10016, "failed", "make dir failed!"}
 
 	ERR_OWNER_CATEGORY_IS_NULL  = ErrResult{20001, "failed", "owner category is null!"}
 	ERR_FIND_CATEGORY_IS_NULL  = ErrResult{20002, "failed", "find category is null!"}
