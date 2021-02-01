@@ -61,6 +61,14 @@ func SliceDifference(slice1, slice2 []string) []string {
 	return nn
 }
 
+// 字符串顺序反转
+func ReverseString(s []string) []string {
+	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
+		s[i], s[j] = s[j], s[i]
+	}
+	return s
+}
+
 // 顺序反转
 func Reverse(s []interface{}) []interface{} {
 	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
