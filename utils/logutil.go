@@ -29,7 +29,7 @@ func RecordLog4LogStash(methodType string, body interface{}, c beego.Controller)
 }
 
 /**
- * 为logStash记录的普通日志
+ * 为logStash记录的普通日志, 输出json格式
  */
 func Info(pattern string, variables... interface{}) {
 	recordVal := make(map[string]interface{})
@@ -39,7 +39,7 @@ func Info(pattern string, variables... interface{}) {
 }
 
 /**
- * 为logStash记录的警告日志
+ * 为logStash记录的警告日志, 输出json格式
  */
 func Warn(pattern string, variables... interface{}) {
 	recordVal := make(map[string]interface{})
@@ -49,11 +49,38 @@ func Warn(pattern string, variables... interface{}) {
 }
 
 /**
- * 为logStash记录的错误日志
+ * 为logStash记录的错误日志, 输出json格式
  */
 func Error(pattern string, variables... interface{}) {
 	recordVal := make(map[string]interface{})
 	recordVal["body"] = fmt.Sprintf(pattern, variables)
 	recordValBytes, _ := json.Marshal(recordVal)
 	logger.Error(string(recordValBytes))
+}
+
+/**
+ * 为logStash记录的普通日志, 输入anything, 输出json格式
+ */
+func InfoX(anything interface{}) {
+	recordVal := make(map[string]interface{})
+	recordVal["body"] = anything
+	logger.Info(anything)
+}
+
+/**
+ * 为logStash记录的警告日志, 输入anything, 输出json格式
+ */
+func WarnX(anything interface{}) {
+	recordVal := make(map[string]interface{})
+	recordVal["body"] = anything
+	logger.Warn(anything)
+}
+
+/**
+ * 为logStash记录的警告日志, 输入anything, 输出json格式
+ */
+func ErrorX(anything interface{}) {
+	recordVal := make(map[string]interface{})
+	recordVal["body"] = anything
+	logger.Error(anything)
 }
