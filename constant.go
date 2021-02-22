@@ -31,7 +31,8 @@ var (
 	ERR_MKDIR_FAIL                          = ErrResult{10016, "failed", "make dir failed!"}
 	ERR_WRITE_FILE_FAIL                     = ErrResult{10017, "failed", "write file failed!"}
 	ERR_NEED_BIND_MOBILE_AND_IDENTIFICATION = ErrResult{10018, "failed", "need bind mobile phone and identification!"}
-	ERR_NEED_IDENTIFICATION                 = ErrResult{10019, "failed", "need bind mobile phone and identification!"}
+	ERR_NEED_IDENTIFICATION                 = ErrResult{10019, "failed", "need identification!"}
+	ERR_IDENTIFICATION_FAIL                 = ErrResult{10020, "failed", "identification! failed"}
 
 	ERR_OWNER_CATEGORY_IS_NULL = ErrResult{20001, "failed", "owner category is null!"}
 	ERR_FIND_CATEGORY_IS_NULL  = ErrResult{20002, "failed", "find category is null!"}
