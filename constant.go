@@ -40,6 +40,7 @@ var (
 	ERR_ALBUM_ID_IS_NULL       = ErrResult{20004, "failed", "albumId is null!"}
 	ERR_IVY_OWNER_UID_IS_NULL  = ErrResult{20005, "failed", "ivyOwnerUid is null!"}
 	ERR_SEARCH_WORD_IS_NULL    = ErrResult{20006, "failed", "searchWord is null!"}
+	ERR_VOICE_HOUSE_ID_IS_NULL    = ErrResult{20007, "failed", "voiceHouseId is null!"}
 
 	ERR_AGORA_GEN_RTC_TOKEN_FAILED = ErrResult{30001, "failed", "gen rtc token failed!"}
 	ERR_AGORA_GEN_RTM_TOKEN_FAILED = ErrResult{30002, "failed", "gen rtm token failed!"}
