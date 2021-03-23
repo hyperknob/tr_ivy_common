@@ -1,9 +1,9 @@
 package utils
 
 import (
+	"github.com/astaxie/beego/context"
 	"net"
 	"strings"
-	"github.com/astaxie/beego/context"
 )
 
 // 服务端获取真实IP地址
@@ -36,4 +36,14 @@ func getIps(ctx *context.Context) []string {
 	} else {
 		return []string{}
 	}
+}
+
+// 获取请求头中的经纬度坐标
+func GetCoordinate(ctx *context.Context) []string {
+	coordinate := make([]string, 0)
+	lng := ctx.Input.Header("X-Lng")
+	lat := ctx.Input.Header("X-Lat")
+	coordinate = append(coordinate, lng)
+	coordinate = append(coordinate, lat)
+	return coordinate
 }
