@@ -38,7 +38,7 @@ func getIps(ctx *context.Context) []string {
 	}
 }
 
-// 获取请求头中的经纬度坐标
+// 获取请求头中的经纬度
 func GetCoordinate(ctx *context.Context) []string {
 	coordinate := make([]string, 0)
 	lng := ctx.Input.Header("X-Lng")
