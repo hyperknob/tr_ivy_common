@@ -43,7 +43,9 @@ func GetCoordinate(ctx *context.Context) []string {
 	coordinate := make([]string, 0)
 	lng := ctx.Input.Header("X-Lng")
 	lat := ctx.Input.Header("X-Lat")
-	coordinate = append(coordinate, lng)
-	coordinate = append(coordinate, lat)
+	if lng != "" && lat != "" {
+		coordinate = append(coordinate, lng)
+		coordinate = append(coordinate, lat)
+	}
 	return coordinate
 }
