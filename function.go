@@ -13,7 +13,7 @@ import (
 func GetDeviceComboId(deviceId string, devicePlatform string, userId string) (deviceComboId string) {
 	if deviceId != "" && devicePlatform != "" {
 		// 仅仅记录app平台的设备id
-		if devicePlatform == "1" || devicePlatform == "2" || devicePlatform == "4" { // 1、2、4分别是ios 安卓 微信小程序
+		if devicePlatform == "1" || devicePlatform == "2" || devicePlatform == "4" { // 1、2、4分别是ios/安卓/微信小程序
 			deviceComboId = deviceId + devicePlatform
 		} else {
 			deviceComboId = "unknown"
