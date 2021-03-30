@@ -48,6 +48,30 @@ var (
 	ERR_AGORA_GEN_RTM_TOKEN_FAILED = ErrResult{30002, "failed", "gen rtm token failed!","生成RTM令牌失败"}
 )
 
+// 埋点key定义，详见http://wiki.wanhegame.fun:8090/pages/viewpage.action?pageId=7438356
+const EVENT_0_PLAY = "0-play"
+const EVENT_0_PAUSE = "0-pause"
+const EVENT_0_RESUME = "0-resume"
+const EVENT_0_STOP = "0-stop"
+const EVENT_0_COMPLETE = "0-complete"
+const EVENT_E_2_REC = "e-2-rec"
+const EVENT_FINDLIST_2_FINDDETAIL = "findList-2-findDetail"
+const EVENT_FOOTPRINTLIST_2_FOOTPRINTDETAIL = "footprintList-2-footprintDetail"
+const EVENT_FAVORITELIST_2_FAVORITEDETAIL = "favoriteList-2-favoriteDetail"
+const EVENT_THUMBSUPLIST_2_THUMBSUPDETAIL = "thumbsupList-2-thumbsupDetail"
+const EVENT_SEARCHLIST_2_SEARCHDETAIL = "searchList-2-searchDetail"
+const EVENT_UPDATEDLIST_2_UPDATEDDETAIL = "updatedList-2-updatedDetail"
+const EVENT_PREFERREDLIST_2_PREFERREDDETAIL = "preferredList-2-preferredDetail"
+const EVENT_ANYDETAIL_2_RECONEDETAIL = "anyDetail-2-recOneDetail"
+const EVENT_ANYDETAIL_2_TAGDETAIL = "anyDetail-2-tagDetail"
+const EVENT_ANYDETAIL_2_OTHERDETAIL = "anyDetail-2-otherDetail"
+const EVENT_ANYDETAIL_2_LASTONE = "anyDetail-2-lastOne"
+const EVENT_ANYDETAIL_2_NEXTONE = "anyDetail-2-nextOne"
+const EVENT_PLAYLIST_ADD_BTN_2_ANY_DETAIL = "playListAddBtn-2-anyDetail"
+const EVENT_PLAYLIST_DEL_BTN_1_READY_PLAYLIST = "playListDelBtn-1-playList"
+const EVENT_PLAYLIST_MOVE_BTN_1_READY_PLAYLIST = "playListMoveBtn-1-playList"
+const EVENT_BLOCK_RECOMMENDED_IVY = "blockRecommendedIvy-2-anyDetail"
+
 // 用于做major_color_tone颜色转换的map（由于python算法计算的主色调不合格，因此需要微调做个映射）
 var MAJOR_COLOR_MAP = map[string]string{
 	"":        "#F5D57F",
