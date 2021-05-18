@@ -35,6 +35,7 @@ var (
 	ERR_NEED_IDENTIFICATION                 = ErrResult{10019, "failed", "need identification!","请实名验证"}
 	ERR_IDENTIFICATION_FAIL                 = ErrResult{10020, "failed", "identification! failed","实名验证错误"}
 	ERR_SEND_SMS_ERR                        = ErrResult{10021, "failed", "send sms error!", "发送短信通知失败"}
+	ERR_DEVICE_PLATFORM_NOT_CAR             = ErrResult{10022, "failed", "X-Platform is not car!","设备平台标识不是车机"}
 
 	ERR_OWNER_CATEGORY_IS_NULL        = ErrResult{20001, "failed", "owner category is null!","UP主分类为空"}
 	ERR_FIND_CATEGORY_IS_NULL         = ErrResult{20002, "failed", "find category is null!","发现分类为空"}
