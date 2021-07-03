@@ -65,8 +65,8 @@ github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/
 github.com/hashicorp/golang-lru v0.5.4 h1:YDjusn29QI/Das2iO9M0BHnIbxPeyuCHsjMW+lJfyTc=
 github.com/hashicorp/golang-lru v0.5.4/go.mod h1:iADmTwqILo4mZ8BN3D2Q6+9jd8WM5uGBxy+E8yxSoD4=
 github.com/hpcloud/tail v1.0.0/go.mod h1:ab1qPbhIpdTxEkNHXyeSf5vhxWSCs/tWer42PpOxQnU=
-github.com/hyperknob/logger v0.0.0-20210703054056-9da839cebc22 h1:wKWyNkx6ZdlV6+GU3bCLZb1H1eevYAYWeCsd3okz5Gc=
-github.com/hyperknob/logger v0.0.0-20210703054056-9da839cebc22/go.mod h1:qOPbiZsdWl9y/BrtRp0+UEVlXisIxkddnY2IcsGx8SA=
+github.com/hyperknob/logger v0.0.0-20210703055620-fa91d753532e h1:beBHL5KsXwFqW2drV2HnS+aGzvJ/sOlP0mjbw2NM6xQ=
+github.com/hyperknob/logger v0.0.0-20210703055620-fa91d753532e/go.mod h1:qOPbiZsdWl9y/BrtRp0+UEVlXisIxkddnY2IcsGx8SA=
 github.com/json-iterator/go v1.1.6/go.mod h1:+SdeFBvtyEkXs7REEP0seUULqWtbJapLOCVDaaPEHmU=
 github.com/json-iterator/go v1.1.10/go.mod h1:KdQUCv79m/52Kvf8AW2vK1V8akMuk1QjK/uOdHXbAo4=
 github.com/julienschmidt/httprouter v1.2.0/go.mod h1:SYymIcj16QtmaHHD7aYtjjsJG7VTCxuUUipMqKk8s4w=
