@@ -72,6 +72,7 @@ const EVENT_ANYDETAIL_2_NEXTONE = "anyDetail-2-nextOne"
 const EVENT_PLAYLIST_ADD_BTN_2_ANY_DETAIL = "playListAddBtn-2-anyDetail"
 const EVENT_PLAYLIST_DEL_BTN_1_READY_PLAYLIST = "playListDelBtn-1-playList"
 const EVENT_PLAYLIST_MOVE_BTN_1_READY_PLAYLIST = "playListMoveBtn-1-playList"
+const EVENT_BLOCK_RECOMMENDED_IVY = "blockRecommendedIvy-2-anyDetail"
 const EVENT_JOIN_VOICEHOUSE_IVY = "joinVoiceHouse-2-x"
 const EVENT_LEAVE_VOICEHOUSE_IVY = "leaveVoiceHouse-2-x"
 
