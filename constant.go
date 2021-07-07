@@ -73,8 +73,8 @@ const EVENT_PLAYLIST_ADD_BTN_2_ANY_DETAIL = "playListAddBtn-2-anyDetail"
 const EVENT_PLAYLIST_DEL_BTN_1_READY_PLAYLIST = "playListDelBtn-1-playList"
 const EVENT_PLAYLIST_MOVE_BTN_1_READY_PLAYLIST = "playListMoveBtn-1-playList"
 const EVENT_BLOCK_RECOMMENDED_IVY = "blockRecommendedIvy-2-anyDetail"
-const EVENT_JOIN_VOICEHOUSE_IVY = "joinVoiceHouse-2-x"
-const EVENT_LEAVE_VOICEHOUSE_IVY = "leaveVoiceHouse-2-x"
+const EVENT_JOIN_VOICEHOUSE = "joinVoiceHouse-2-x"
+const EVENT_LEAVE_VOICEHOUSE = "leaveVoiceHouse-2-x"
 
 // 用于做major_color_tone颜色转换的map（由于python算法计算的主色调不合格，因此需要微调做个映射）
 var MAJOR_COLOR_MAP = map[string]string{
