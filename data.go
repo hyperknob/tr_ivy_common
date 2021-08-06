@@ -1,13 +1,27 @@
 package tr_ivy_common
 
 import (
-	"fmt"
 	"time"
 )
 
 type JsonTime time.Time
 
-func (this JsonTime) MarshalJSON() ([]byte, error) {
-	var stamp = fmt.Sprintf("\"%s\"", time.Time(this).Format("2006-01-02 15:04:05"))
-	return []byte(stamp), nil
+const timeFormat = "2006-01-02 15:04:05"
+
+func (t *JsonTime) UnmarshalJSON(data []byte) (err error) {
+	now, err := time.ParseInLocation(`"`+timeFormat+`"`, string(data), time.Local)
+	*t = JsonTime(now)
+	return
+}
+
+func (t JsonTime) MarshalJSON() ([]byte, error) {
+	b := make([]byte, 0, len(timeFormat)+2)
+	b = append(b, '"')
+	b = time.Time(t).AppendFormat(b, timeFormat)
+	b = append(b, '"')
+	return b, nil
+}
+
+func (t JsonTime) String() string {
+	return time.Time(t).Format(timeFormat)
 }
