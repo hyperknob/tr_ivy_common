@@ -77,6 +77,7 @@ const EVENT_BLOCK_RECOMMENDED_IVY = "blockRecommendedIvy-2-anyDetail"
 const EVENT_JOIN_VOICEHOUSE = "joinVoiceHouse-2-x"
 const EVENT_LEAVE_VOICEHOUSE = "leaveVoiceHouse-2-x"
 const EVENT_SWIPE_THROUGH = "swipeThrough"
+const EVENT_0_PROGRESS = "0-progress"
 
 // 用于做major_color_tone颜色转换的map（由于python算法计算的主色调不合格，因此需要微调做个映射）
 var MAJOR_COLOR_MAP = map[string]string{
