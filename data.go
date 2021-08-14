@@ -1,6 +1,7 @@
 package tr_ivy_common
 
 import (
+	"strings"
 	"time"
 )
 
@@ -9,7 +10,12 @@ type JsonTime time.Time
 const timeFormat = "2006-01-02 15:04:05"
 
 func (t *JsonTime) UnmarshalJSON(data []byte) (err error) {
-	now, err := time.ParseInLocation(`"`+timeFormat+`"`, string(data), time.Local)
+	dataStr := string(data)
+	var now time.Time
+	// 以下语句为了兼容RFC3339格式
+	dataStr = strings.ReplaceAll(dataStr, "T", " ")
+	dataStr = strings.ReplaceAll(dataStr, "+08:00", "")
+	now, err = time.ParseInLocation(`"`+timeFormat+`"`, dataStr, time.Local)
 	*t = JsonTime(now)
 	return
 }
