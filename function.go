@@ -13,7 +13,7 @@ import (
 func GetDeviceComboId(deviceId string, devicePlatform string, userId string) (deviceComboId string) {
 	if deviceId != "" && devicePlatform != "" {
 		// 仅仅记录app平台的设备id
-		if devicePlatform == "1" || devicePlatform == "2" || devicePlatform == "4" || devicePlatform == "7" { // 1、2、4、7分别是ios/安卓/微信小程序/车机端
+		if devicePlatform == "1" || devicePlatform == "2" || devicePlatform == "4" || devicePlatform == "5" || devicePlatform == "7" { // 1、2、4、5、7分别是ios/安卓/微信小程序/微信H5(公众号)/车机端
 			deviceComboId = deviceId + devicePlatform
 		} else {
 			deviceComboId = "unknown"
@@ -24,6 +24,18 @@ func GetDeviceComboId(deviceId string, devicePlatform string, userId string) (de
 		//}
 	} else {
 		deviceComboId = "unknown"
+	}
+	return
+}
+
+/*
+ * 根据DeviceComboId获取deviceId和devicePlatform
+ */
+func ParseDeviceComboId(deviceComboId string) (deviceId string, devicePlatform string) {
+	if deviceComboId != "" {
+		length := len(deviceComboId)
+		deviceId = deviceComboId[0 : length - 1]
+		devicePlatform = deviceComboId[length - 1: length]
 	}
 	return
 }
