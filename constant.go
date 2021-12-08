@@ -38,6 +38,7 @@ var (
 	ERR_DEVICE_PLATFORM_NOT_CAR             = ErrResult{10022, "failed", "X-Platform is not car!","设备平台标识不是车机"}
 	ERR_MOBILE_VERIFY_TOKEN_AUTH_FAILED     = ErrResult{10023, "failed", "token auth failed during mobile number Verification!","号码认证令牌校验失败"}
 	ERR_CID_IS_NULL                         = ErrResult{10024, "failed", "cid is null!","消息推送标识为空"}
+	ERR_INVITE_CODE_ERR                     = ErrResult{10025, "failed", "invite code is wrong!","邀请码错误！"}
 
 	ERR_OWNER_CATEGORY_IS_NULL        = ErrResult{20001, "failed", "owner category is null!","UP主分类为空"}
 	ERR_FIND_CATEGORY_IS_NULL         = ErrResult{20002, "failed", "find category is null!","发现分类为空"}
