@@ -81,6 +81,7 @@ const EVENT_JOIN_VOICEHOUSE = "joinVoiceHouse-2-x"
 const EVENT_LEAVE_VOICEHOUSE = "leaveVoiceHouse-2-x"
 const EVENT_SWIPE_THROUGH = "swipeThrough"
 const EVENT_0_PROGRESS = "0-progress"
+const EVENT_IOS_DETAIL_SKIP = "ios-detail-skip"
 
 /** 车机端 **/
 const EVENT_VEHICLE_JOIN_VOICEHOUSE = "vh-in"
