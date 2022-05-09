@@ -49,6 +49,7 @@ var (
 	ERR_SEARCH_WORD_IS_NULL           = ErrResult{20006, "failed", "searchWord is null!", "搜索关键词为空"}
 	ERR_VOICE_HOUSE_ID_IS_NULL        = ErrResult{20007, "failed", "voiceHouseId is null!","房间标识为空"}
 	ERR_VOICE_HOUSE_OWNER_UID_IS_NULL = ErrResult{20008, "failed", "voiceHouseOwnerUid is null!", "房间主持人标识为空"}
+	ERR_UID_IS_NULL                   = ErrResult{20009, "failed", "uid is null!","用户标识为空"}
 
 	ERR_AGORA_GEN_RTC_TOKEN_FAILED = ErrResult{30001, "failed", "gen rtc token failed!","生成RTC令牌失败"}
 	ERR_AGORA_GEN_RTM_TOKEN_FAILED = ErrResult{30002, "failed", "gen rtm token failed!","生成RTM令牌失败"}
